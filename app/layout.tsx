@@ -4,6 +4,7 @@ import { Oxanium } from 'next/font/google';
 import './globals.css';
 import NavBar from './NavBar';
 import { Theme, ThemePanel } from '@radix-ui/themes';
+import '@radix-ui/themes/styles.css';
 
 const oxanium = Oxanium({ subsets: ['latin'] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className='p-5'>
+            <body>
                 <Theme>
                     <header>
                         <NavBar />
