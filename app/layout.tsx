@@ -19,12 +19,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>
+            <body className='p-5'>
                 <Theme>
                     <header>
                         <NavBar />
                     </header>
-                    <main className="flex min-h-screen flex-col items-center justify-between p-5">
+                    <main>
                         {children}
                     </main>
                 </Theme>
