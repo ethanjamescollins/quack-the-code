@@ -1,10 +1,9 @@
-import type { Metadata } from 'next';
-// TODO: add font
-import { Oxanium } from 'next/font/google';
-import './globals.css';
-import NavBar from './NavBar';
-import { Theme, ThemePanel } from '@radix-ui/themes';
+import { Theme } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
+import type { Metadata } from 'next';
+import { Oxanium } from 'next/font/google';
+import NavBar from './NavBar';
+import './globals.css';
 
 const oxanium = Oxanium({ subsets: ['latin'] });
 
