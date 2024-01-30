@@ -21,10 +21,7 @@ const NavBar = () => {
                     HTML
                 </div>
                 <Flex gap="2">
-                    <Link
-                        
-                        href={''}
-                    >
+                    <Link href={''}>
                         <FaCircle className="md:w-7 md:h-7 fill-black w-6 h-6" />
                     </Link>
                     <Link className="bg-black text-white rounded p-1" href={''}>
