@@ -1,26 +1,35 @@
-import { Box, Button, Container, Flex, IconButton, Text } from '@radix-ui/themes';
+import {
+    Box,
+    Button,
+    Container,
+    Flex,
+    IconButton,
+    Text,
+} from '@radix-ui/themes';
+import { HamburgerMenuIcon, ValueIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AiOutlineMenu } from "react-icons/ai";
 
 const NavBar = () => {
     return (
         <nav className="p-3">
-            <Flex justify='between' align='center'>
-                <Link href='/'>
+            <Flex justify="between" align="center">
+                <Link href="/">
                     <Image
-                        src={'/images/qtc.png'}
+                        src={'/images/qtc.svg'}
                         alt=""
                         width={30}
                         height={30}
                     />
                 </Link>
-                <Button size="3" variant="soft">
+                <button className='bg-black text-white px-3 rounded'>
                     HTML
-                </Button>
+                </button>
                 <Flex>
-                    <IconButton>
-                        
-                    </IconButton>
+                    <button>
+                    <AiOutlineMenu />
+                    </button>
                 </Flex>
             </Flex>
         </nav>
