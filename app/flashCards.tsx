@@ -68,6 +68,7 @@ const flashCards = () => {
         //         </Card>
         //     </Flex>
         // </div>
+        // static flash cards layered
         <div className="mt-[20vh]">
             <Flex justify="center">
                 <div className="grid grid-cols-10 grid-rows-10 p-5 h-[400px] max-w-[390px]">
