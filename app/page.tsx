@@ -1,8 +1,7 @@
-import Image from "next/image";
+import FlashCards from "./flashCards";
+
 export default function Home() {
     return (
-        <div>
-        </div>
-
+            <FlashCards />
     );
 }
