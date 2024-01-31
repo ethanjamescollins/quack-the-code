@@ -1,7 +1,7 @@
-import FlashCard from "./components/flashCard";
+import FlashCards from "./flashCards";
 
 export default function Home() {
     return (
-            <FlashCard />
+            <FlashCards />
     );
 }

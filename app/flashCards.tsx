@@ -1,4 +1,4 @@
-import { Card, Flex, Grid } from '@radix-ui/themes';
+import { Card, Flex } from '@radix-ui/themes';
 
 interface FlashCard {
     id: number;
@@ -50,7 +50,7 @@ const htmlFlashCards: FlashCard[] = [
     },
 ];
 
-const flashCard = () => {
+const flashCards = () => {
     return (
         // Master card
         // <div className="mt-[20vh]">
@@ -69,7 +69,7 @@ const flashCard = () => {
         //     </Flex>
         // </div>
         <div className="mt-[20vh]">
-            <Flex justify='center'>
+            <Flex justify="center">
                 <div className="grid grid-cols-10 grid-rows-10 p-5 h-[400px] max-w-[390px]">
                     <Card
                         style={{
@@ -122,4 +122,4 @@ const flashCard = () => {
     );
 };
 
-export default flashCard;
+export default flashCards;
