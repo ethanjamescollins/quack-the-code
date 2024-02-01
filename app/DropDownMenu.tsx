@@ -6,15 +6,15 @@ const DropDownMenu = () => {
         <>
             <div className="drawer drawer-end z-[100]">
                 <input
+                    className="drawer-toggle"
                     id="my-drawer-4"
                     type="checkbox"
-                    className="drawer-toggle"
                 />
                 <div className="drawer-content">
                     {/* Page content here */}
                     <label
-                        htmlFor="my-drawer-4"
                         className="drawer-button cursor-pointer"
+                        htmlFor="my-drawer-4"
                     >
                         <AiOutlineMenu
                             className=" md:w-5 md:h-5"
@@ -24,17 +24,24 @@ const DropDownMenu = () => {
                 </div>
                 <div className="drawer-side">
                     <label
-                        htmlFor="my-drawer-4"
                         aria-label="close sidebar"
                         className="drawer-overlay"
+                        htmlFor="my-drawer-4"
                     ></label>
                     <ul className="menu p-4 w-80 min-h-full bg-white text-black">
                         {/* Sidebar content here */}
                         <li>
-                            <Link href={''}>Sidebar Item 1</Link>
+                            <Link
+                                className="hover:bg-slate-300 text-red-800"
+                                href={''}
+                            >
+                                HTML
+                            </Link>
                         </li>
                         <li>
-                            <Link href={''}>Sidebar Item 2</Link>
+                            <Link href={''} className="hover:bg-slate-300">
+                                CSS
+                            </Link>
                         </li>
                     </ul>
                 </div>
