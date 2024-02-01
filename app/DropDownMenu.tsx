@@ -4,7 +4,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 const DropDownMenu = () => {
     return (
         <>
-            <div className="drawer drawer-end z-[100]">
+            <div className="drawer  z-[100]">
                 <input
                     className="drawer-toggle"
                     id="my-drawer-4"
@@ -17,8 +17,8 @@ const DropDownMenu = () => {
                         htmlFor="my-drawer-4"
                     >
                         <AiOutlineMenu
-                            className=" md:w-5 md:h-5"
-                            color="white"
+                            className="md:w-8 md:h-8 border-2 border-black rounded w-6 h-6 "
+                            color="black"
                         />
                     </label>
                 </div>
@@ -32,7 +32,7 @@ const DropDownMenu = () => {
                         {/* Sidebar content here */}
                         <li>
                             <Link
-                                className="hover:bg-slate-300 text-red-800"
+                                className="hover:bg-slate-300 text-red-500"
                                 href={''}
                             >
                                 HTML
