@@ -1,4 +1,4 @@
-import { Badge, Flex, Switch } from '@radix-ui/themes';
+import { Badge, Flex } from '@radix-ui/themes';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCircle } from 'react-icons/fa';
@@ -26,7 +26,7 @@ const NavBar = () => {
                     </Link>
                 </Flex>
                 <Badge
-                    className="rounded"
+                    className="md:h-10"
                     size="2"
                     style={{ background: 'black', color: 'white' }}
                 >
