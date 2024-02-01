@@ -1,7 +1,6 @@
-import { Flex } from '@radix-ui/themes';
+import { Flex, Switch } from '@radix-ui/themes';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineMenu } from 'react-icons/ai';
 import { FaCircle } from 'react-icons/fa';
 import DropDownMenu from './DropDownMenu';
 
@@ -24,10 +23,11 @@ const NavBar = () => {
                 <Flex gap="2">
                     <Link href={''}>
                         <FaCircle className="md:w-7 md:h-7 fill-black w-6 h-6" />
+                        {/* <Switch defaultChecked size='3'/> */}
                     </Link>
-                    <Link className="bg-black text-white rounded p-1" href={''}>
+                    <div className="bg-black text-white rounded p-1">
                         <DropDownMenu />
-                    </Link>
+                    </div>
                 </Flex>
             </Flex>
         </nav>
