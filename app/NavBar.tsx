@@ -10,11 +10,11 @@ const NavBar = () => {
             <Flex justify="between" align="center">
                 <Link href="/">
                     <Image
-                        src={'/images/qtc.svg'}
                         alt=""
-                        width={30}
-                        height={30}
                         className="md:w-10 md:h-10"
+                        height={30}
+                        src={'/images/qtc.svg'}
+                        width={30}
                     />
                 </Link>
                 <div className="flex bg-black text-white px-8 rounded text-sm md:text-lg">
@@ -26,8 +26,8 @@ const NavBar = () => {
                     </Link>
                     <Link className="bg-black text-white rounded p-1" href={''}>
                         <AiOutlineMenu
-                            color="white"
                             className=" md:w-5 md:h-5"
+                            color="white"
                         />
                     </Link>
                 </Flex>

@@ -1,5 +1,5 @@
-import { Button, Flex } from '@radix-ui/themes';
 import { CheckIcon, Cross2Icon, ReloadIcon } from '@radix-ui/react-icons';
+import { Button, Flex } from '@radix-ui/themes';
 
 const RatingButtons = () => {
     return (
