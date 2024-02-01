@@ -50,7 +50,7 @@ const htmlFlashCards: FlashCard[] = [
     },
 ];
 
-const flashCards = () => {
+const FlashCards = () => {
     return (
         // Master card
         // <div className="mt-[20vh]">
@@ -123,4 +123,4 @@ const flashCards = () => {
     );
 };
 
-export default flashCards;
+export default FlashCards;
