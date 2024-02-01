@@ -4,14 +4,14 @@ import { CheckIcon, Cross2Icon, ReloadIcon } from '@radix-ui/react-icons';
 const RatingButtons = () => {
     return (
         <Flex gap="1">
-            <Button>
-              <CheckIcon/>  
+            <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
+                <ReloadIcon />
             </Button>
-            <Button>
-              <Cross2Icon/>
+            <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
+                <Cross2Icon />
             </Button>
-            <Button>
-              <ReloadIcon/>
+            <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
+                <CheckIcon />
             </Button>
         </Flex>
     );
