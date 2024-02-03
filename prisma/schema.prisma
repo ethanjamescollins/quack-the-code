@@ -37,7 +37,6 @@ model Card {
   card     Performance[]
   packId   Int
   pack     Pack          @relation(fields: [packId], references: [id])
-  // add pack deets when done
 }
 
 model Pack {
