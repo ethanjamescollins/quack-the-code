@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int           @id @default(autoincrement())
+  // this may be optional depending on sign in method
+  email    String?       @unique
+  name     String
+  // will need encrypting using bcrypt
+  password String
+  user     Performance[]
+}
+
+model Performance {
+  id         Int  @id @default(autoincrement())
+  userId     Int
+  user       User @relation(fields: [userId], references: [id])
+  cardId     Int
+  card       Card @relation(fields: [cardId], references: [id])
+  score      Int
+  srSchedule Int
+}
+
+model Card {
+  id       Int           @id @default(autoincrement())
+  question String
+  answer   String
+  card     Performance[]
+  packId   Int
+  pack     Pack          @relation(fields: [packId], references: [id])
+}
+
+model Pack {
+  id       Int    @id @default(autoincrement())
+  pack     Card[]
+  topicId  Int
+  topic    Topic  @relation(fields: [topicId], references: [id])
+  packName String
+}
+
+model Topic {
+  id        Int    @id @default(autoincrement())
+  topic     Pack[]
+  topicName String
+  // src string for svg or equiv
+  topicIcon String
+}
