@@ -92,23 +92,27 @@ const FlashCards = () => {
         // </Card>
 
         <div className="bg-slate-100 carousel carousel-center gap-10 mt-[20vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
+            {/* <div className='w-[50%] carousel-item'></div> */}
             {flashCardData.map(data => (
-                <Card
-                    className="carousel-item w-[100%] justify-center"
-                    key={data.id}
-                    style={{
-                        background: 'white',
-                        border: '5px solid black',
-                    }}
-                >
-                    {/* container for any future items, could be a grid instead */}
-                    <Flex className="py-4 text-center" justify="center">
-                        <p>{data.question}</p>
-                    </Flex>
-                    <Flex className="mt-[300px]" justify="center">
-                        <RatingButtons dataId={data.id} />
-                    </Flex>
-                </Card>
+                <>
+                    <Card
+                        className="carousel-item w-[100%] "
+                        key={data.id}
+                        style={{
+                            background: 'white',
+                            border: '5px solid black',
+                        }}
+                        id={data.id.toString()}
+                    >
+                        {/* container for any future items, could be a grid instead */}
+                        <Flex className="py-4 text-center" justify="center">
+                            <p>{data.question}</p>
+                        </Flex>
+                        <Flex className="mt-[300px]" justify="center">
+                            <RatingButtons dataId={data.id} />
+                        </Flex>
+                    </Card>
+                </>
             ))}
         </div>
     );
