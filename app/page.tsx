@@ -1,6 +1,6 @@
 import { Flex } from '@radix-ui/themes';
-import FlashCards from './FlashCards';
-import RatingButtons from './RatingButtons';
+import FlashCards from './ui/flashCards/FlashCards';
+import RatingButtons from './ui/flashCards/RatingButtons';
 
 export default function Home() {
     return (

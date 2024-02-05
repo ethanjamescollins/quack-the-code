@@ -2,7 +2,7 @@ import { Theme } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import type { Metadata } from 'next';
 import { Oxanium } from 'next/font/google';
-import NavBar from './NavBar';
+import NavBar from './ui/navBar/NavBar';
 import './globals.css';
 
 const oxanium = Oxanium({ subsets: ['latin'] });
