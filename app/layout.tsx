@@ -16,8 +16,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={oxanium.className}>
-            <body>
+        <html lang="en">
+            <body className={`${oxanium.className} anitaliased`}>
                 <Theme>
                     <header>
                         <NavBar />
