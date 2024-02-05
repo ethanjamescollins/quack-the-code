@@ -23,6 +23,7 @@ const RatingButtons = ({ dataId }: Props) => {
         // </Flex>
 
         <Flex gap="1">
+            {/* Buttons may have to become seperate client components for data fetching */}
             <Link href={`#${dataId + 1}`}>
                 <Button
                     size="3"
