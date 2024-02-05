@@ -26,7 +26,7 @@ const NavBar = () => {
                     </Link>
                 </Flex>
                 <Badge
-                    className="md:h-10"
+                    className="md:h-10 self-center"
                     size="2"
                     style={{ background: 'black', color: 'white' }}
                 >

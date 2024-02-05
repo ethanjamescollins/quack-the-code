@@ -91,32 +91,25 @@ const FlashCards = () => {
         //     <p></p>
         // </Card>
 
-        <div className="mt-[20vh]">
-            {/* <Flex justify="center"> */}
-            <div className="carousel carousel-center p-4 gap-10 w-[315px] md:w-[75vw] md:space-x-0  bg-slate-100 rounded-box">
-                {flashCardData.map(data => (
-                    <div
-                        className="carousel-item w-[100%] justify-center"
-                        key={data.id}
-                    >
-                        <Card
-                            style={{
-                                background: 'white',
-                                border: '5px solid black',
-                            }}
-                        >
-                            {/* container for any future items, could be a grid instead */}
-                            <Flex justify='center' className='py-4'>
-                                <p className="text-center">{data.question}</p>
-                            </Flex>
-                            <Flex justify="center" className="mt-[300px]">
-                                <RatingButtons />
-                            </Flex>
-                        </Card>
-                    </div>
-                ))}
-            </div>
-            {/* </Flex> */}
+        <div className="bg-slate-100 carousel carousel-center gap-10 mt-[20vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
+            {flashCardData.map(data => (
+                <Card
+                    className="carousel-item w-[100%] justify-center"
+                    key={data.id}
+                    style={{
+                        background: 'white',
+                        border: '5px solid black',
+                    }}
+                >
+                    {/* container for any future items, could be a grid instead */}
+                    <Flex className="py-4 text-center" justify="center">
+                        <p>{data.question}</p>
+                    </Flex>
+                    <Flex className="mt-[300px]" justify="center">
+                        <RatingButtons />
+                    </Flex>
+                </Card>
+            ))}
         </div>
     );
 };
