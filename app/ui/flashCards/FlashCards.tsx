@@ -93,10 +93,10 @@ const FlashCards = () => {
 
         <div className="mt-[20vh]">
             {/* <Flex justify="center"> */}
-            <div className="carousel carousel-center p-4 gap-10 w-[80vw] md:w-[75vw] md:space-x-0  bg-slate-100 rounded-box">
+            <div className="carousel carousel-center p-4 gap-10 w-[315px] md:w-[75vw] md:space-x-0  bg-slate-100 rounded-box">
                 {flashCardData.map(data => (
                     <div
-                        className="carousel-item md:w-[100%] justify-center"
+                        className="carousel-item w-[100%] justify-center"
                         key={data.id}
                     >
                         <Card
@@ -104,8 +104,8 @@ const FlashCards = () => {
                                 background: 'white',
                                 border: '5px solid black',
                             }}
-                            className="w-[272px] md:w-[500px] "
                         >
+                            {/* container for any future items, could be a grid instead */}
                             <Flex justify='center' className='py-4'>
                                 <p className="text-center">{data.question}</p>
                             </Flex>
@@ -122,4 +122,3 @@ const FlashCards = () => {
 };
 
 export default FlashCards;
-// carousel carousel-center bg-black rounded-box w-[80vw] first-of-type:px-5
