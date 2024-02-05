@@ -1,4 +1,3 @@
-'use client';
 import { CheckIcon, Cross2Icon, ReloadIcon } from '@radix-ui/react-icons';
 import { Button, Flex } from '@radix-ui/themes';
 import Link from 'next/link';
@@ -24,21 +23,30 @@ const RatingButtons = ({ dataId }: Props) => {
         // </Flex>
 
         <Flex gap="1">
-            <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
-                <Link href={`#${dataId + 1}`}>
+            <Link href={`#${dataId + 1}`}>
+                <Button
+                    size="3"
+                    style={{ background: 'black', cursor: 'pointer' }}
+                >
                     <ReloadIcon />
-                </Link>
-            </Button>
-            <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
-                <Link href={`#${dataId + 1}`}>
+                </Button>
+            </Link>
+            <Link href={`#${dataId + 1}`}>
+                <Button
+                    size="3"
+                    style={{ background: 'black', cursor: 'pointer' }}
+                >
                     <Cross2Icon />
-                </Link>
-            </Button>
-            <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
-                <Link href={`#${dataId + 1}`}>
+                </Button>
+            </Link>
+            <Link href={`#${dataId + 1}`}>
+                <Button
+                    size="3"
+                    style={{ background: 'black', cursor: 'pointer' }}
+                >
                     <CheckIcon />
-                </Link>
-            </Button>
+                </Button>
+            </Link>
         </Flex>
     );
 };
