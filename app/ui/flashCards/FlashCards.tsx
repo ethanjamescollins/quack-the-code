@@ -106,7 +106,7 @@ const FlashCards = () => {
                         <p>{data.question}</p>
                     </Flex>
                     <Flex className="mt-[300px]" justify="center">
-                        <RatingButtons />
+                        <RatingButtons dataId={data.id} />
                     </Flex>
                 </Card>
             ))}

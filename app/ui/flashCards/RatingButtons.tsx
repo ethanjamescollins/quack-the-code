@@ -1,7 +1,11 @@
 import { CheckIcon, Cross2Icon, ReloadIcon } from '@radix-ui/react-icons';
 import { Button, Flex } from '@radix-ui/themes';
 
-const RatingButtons = () => {
+interface Props {
+    dataId: number
+}
+
+const RatingButtons = ({dataId}: Props) => {
     return (
         <Flex gap="1">
             <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
