@@ -128,7 +128,6 @@ const FlashCards = () => {
         // </div>
 
         <div className="bg-slate-100 carousel carousel-center gap-10 mt-[20vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
-            {/* <div className='w-[50%] carousel-item'></div> */}
             {flashCardData.map(data => (
                 <div
                     className="stack carousel-item w-[100%] h-[100%]"

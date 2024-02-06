@@ -3,7 +3,7 @@ import { Button, Flex } from '@radix-ui/themes';
 import Link from 'next/link';
 
 interface Props {
-    dataId: number;
+    dataId: string;
 }
 
 const RatingButtons = ({ dataId }: Props) => {
