@@ -1,6 +1,4 @@
-import { Card, Flex } from '@radix-ui/themes';
 import cardsDummyData from '@/app/lib/placeholder-data';
-import RatingButtons from './RatingButtons';
 import FlashCard from './FlashCard';
 
 interface FlashCard {

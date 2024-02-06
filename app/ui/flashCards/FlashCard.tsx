@@ -74,33 +74,27 @@ const FlashCard = ({ id, question, answer }: Props) => {
             </Card> */}
 
             <Card
-                className="border rounded border-black bg-white"
-                style={{
-                    background: 'white',
-                    border: '5px solid black',
-                }}
+                // style={{
+                //     background: 'white',
+                //     border: '5px solid black',
+                // }}
+                id={id}
             >
                 <div
                     className={clsx('h-[420px]', {
                         'h-[380px]': flip === true,
                     })}
-                    id={id}
-                    onClick={() => (setCardFlip(!flip), console.log('click'))}
+                    onClick={() => setCardFlip(!flip)}
                 >
                     {/* container for any future items, could be a grid instead */}
-                    <Flex
-                        className="py-4 text-center"
-                        direction="column"
-                        align="center"
-                        justify="between"
-                    >
-                        <p className="absolute pt-[15%] px-2">
+                    <Flex className="p-4" direction="column" align="center">
+                        <p className="absolute pt-[15%] text-center">
                             {flip ? answer : question}
                         </p>
                     </Flex>
                 </div>
                 {flip ? (
-                    <Flex className="mt-[0px]" justify="center">
+                    <Flex justify="center">
                         <RatingButtons dataId={parseInt(id)} />
                     </Flex>
                 ) : null}
