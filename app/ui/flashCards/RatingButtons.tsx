@@ -13,26 +13,26 @@ const RatingButtons = ({ dataId }: Props) => {
             <Link href={`#${dataId + 1}`}>
                 <Button
                     size="3"
-                    style={{ background: 'black', cursor: 'pointer' }}
+                    className="hover:bg-opacity-90 bg-yellow-400 cursor-pointer border-2 "
                     onClick={() => console.log('score 4')}
                 >
-                    <ReloadIcon />
+                    <ReloadIcon style={{ color: 'black' }} />
                 </Button>
             </Link>
             <Link href={`#${dataId + 1}`}>
                 <Button
                     size="3"
-                    style={{ background: 'black', cursor: 'pointer' }}
+                    className="hover:bg-opacity-90 bg-yellow-400 cursor-pointer"
                 >
-                    <Cross2Icon />
+                    <Cross2Icon style={{ color: 'black' }} />
                 </Button>
             </Link>
             <Link href={`#${dataId + 1}`}>
                 <Button
                     size="3"
-                    style={{ background: 'black', cursor: 'pointer' }}
+                    className="hover:bg-opacity-90 bg-yellow-400 cursor-pointer"
                 >
-                    <CheckIcon />
+                    <CheckIcon style={{ color: 'black' }} />
                 </Button>
             </Link>
         </Flex>
