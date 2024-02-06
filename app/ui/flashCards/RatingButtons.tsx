@@ -1,7 +1,6 @@
 import { CheckIcon, Cross2Icon, ReloadIcon } from '@radix-ui/react-icons';
 import { Button, Flex } from '@radix-ui/themes';
 import Link from 'next/link';
-import { AiOutlineConsoleSql } from 'react-icons/ai';
 
 interface Props {
     dataId: number;
@@ -9,21 +8,8 @@ interface Props {
 
 const RatingButtons = ({ dataId }: Props) => {
     return (
-        // Master buttons
-        // <Flex gap="1">
-        //     <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
-        //         <ReloadIcon />
-        //     </Button>
-        //     <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
-        //         <Cross2Icon />
-        //     </Button>
-        //     <Button size="3" style={{ background: 'black', cursor: 'pointer' }}>
-        //         <CheckIcon />
-        //     </Button>
-        // </Flex>
-
         <Flex gap="1">
-            {/* Buttons may have to become seperate client components for data fetching */}
+            {/* May have to become client component for sending score data */}
             <Link href={`#${dataId + 1}`}>
                 <Button
                     size="3"
