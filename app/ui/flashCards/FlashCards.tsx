@@ -1,6 +1,7 @@
 import { Card, Flex } from '@radix-ui/themes';
 import cardsDummyData from '@/app/lib/placeholder-data';
 import RatingButtons from './RatingButtons';
+import FlashCard from './FlashCard';
 
 interface FlashCard {
     id: number;
@@ -29,67 +30,6 @@ const FlashCards = () => {
         //     </Flex>
         // </div>
         // static flash cards layered
-
-        // Layered cards with grid and buttons underneath
-        // <div className="mt-[20vh]">
-        //     <Flex justify="center">
-        //         <div className="grid grid-cols-10 grid-rows-10 p-5 h-[400px] max-w-[390px]">
-        //             <Card
-        //                 style={{
-        //                     border: '5px solid black',
-        //                     background: 'white',
-        //                 }}
-        //                 className="col-start-1 col-end-7 row-start-3 row-end-9 z-[9]"
-        //             >
-        //                 <p>{htmlFlashCards[0].question}</p>
-        //             </Card>
-        //             <Card
-        //                 style={{
-        //                     border: '5px solid black',
-        //                     background: 'white',
-        //                 }}
-        //                 className="col-start-6 col-end-11 row-start-3 row-end-9 z-20"
-        //             >
-        //                 <p>{htmlFlashCards[0].question}</p>
-        //             </Card>
-        //             <Card
-        //                 style={{
-        //                     border: '5px solid black',
-        //                     background: 'white',
-        //                 }}
-        //                 className="col-start-2 col-end-8 row-start-2 row-end-10 z-40"
-        //             >
-        //                 <p>{htmlFlashCards[0].question}</p>
-        //             </Card>
-        //             <Card
-        //                 style={{
-        //                     border: '5px solid black',
-        //                     background: 'white',
-        //                 }}
-        //                 className="col-start-3 col-end-9 row-start-1 row-end-12 row-span-2 z-50"
-        //             >
-        //                 <p>{htmlFlashCards[0].question}</p>
-        //             </Card>
-        //             <Card
-        //                 style={{
-        //                     border: '5px solid black',
-        //                     background: 'white',
-        //                 }}
-        //                 className="col-start-5 col-end-10 row-start-2 row-end-10 z-30"
-        //             >
-        //                 <p>{htmlFlashCards[0].question}</p>
-        //             </Card>
-        //         </div>
-        //     </Flex>
-        // </div>
-        // <Card
-        //     style={{
-        //         border: '5px solid black',
-        //         background: 'white',
-        //     }}
-        // >
-        //     <p></p>
-        // </Card>
 
         // Unstacked cards
         // <div className="bg-slate-100 carousel carousel-center gap-10 mt-[20vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
@@ -168,6 +108,27 @@ const FlashCards = () => {
         //     ))}
         // </div>
 
+        // Cards that flip and move along carousel at same time
+        // <div className="bg-slate-100 carousel carousel-center gap-10 mt-[20vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
+        //     {/* <div className='w-[50%] carousel-item'></div> */}
+        //     {flashCardData.map(data => (
+        //         <div
+        //             className="stack carousel-item w-[100%] h-[100%]"
+        //             key={data.id}
+        //         >
+        //             <FlashCard
+        //                 id={data.id.toString()}
+        //                 question={data.question}
+        //                 answer={data.answer}
+        //             >
+        //                 <Flex className="mt-[300px]" justify="center">
+        //                     <RatingButtons dataId={data.id} />
+        //                 </Flex>
+        //             </FlashCard>
+        //         </div>
+        //     ))}
+        // </div>
+
         <div className="bg-slate-100 carousel carousel-center gap-10 mt-[20vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
             {/* <div className='w-[50%] carousel-item'></div> */}
             {flashCardData.map(data => (
@@ -175,40 +136,11 @@ const FlashCards = () => {
                     className="stack carousel-item w-[100%] h-[100%]"
                     key={data.id}
                 >
-                    <Card
-                        className="h-[420px]"
-                        style={{
-                            background: 'white',
-                            border: '5px solid black',
-                        }}
+                    <FlashCard
                         id={data.id.toString()}
-                    >
-                        {/* container for any future items, could be a grid instead */}
-                        <Flex
-                            className="py-4 text-center"
-                            direction="column"
-                            align="center"
-                            justify="between"
-                        >
-                            <p className="absolute">{data.question}</p>
-                        </Flex>
-                        <Flex className="mt-[300px]" justify="center">
-                            <RatingButtons dataId={data.id} />
-                        </Flex>
-                    </Card>
-                    <Card
-                        className="h-[420px]"
-                        style={{
-                            background: 'white',
-                            border: '5px solid black',
-                        }}
-                        id={data.id.toString()}
-                    >
-                        {/* container for any future items, could be a grid instead */}
-                        <Flex className="py-4 text-center" justify="center">
-                            <p>{data.answer}</p>
-                        </Flex>
-                    </Card>
+                        question={data.question}
+                        answer={data.answer}
+                    />
                 </div>
             ))}
         </div>
