@@ -3,6 +3,7 @@ import { Card, Flex } from '@radix-ui/themes';
 import React, { useState } from 'react';
 import RatingButtons from './RatingButtons';
 import clsx from 'clsx';
+import styles from './flashcard.module.css';
 
 interface Props {
     id: string;
@@ -11,7 +12,7 @@ interface Props {
 }
 
 const FlashCard = ({ id, question, answer }: Props) => {
-    const [flip, setCardFlip] = useState(false);
+    const [flipped, setCardFlip] = useState(false);
 
     return (
         <>
@@ -73,28 +74,38 @@ const FlashCard = ({ id, question, answer }: Props) => {
                 {children}
             </Card> */}
 
-            <Card
-                id={id}
+            <div
+                className={`${styles.wrapper} ${
+                    flipped ? `${styles.flip}` : ''
+                }`}
+                onClick={() => setCardFlip(!flipped)}
             >
-                <div
-                    className={clsx('h-[420px]', {
-                        'h-[380px]': flip === true,
-                    })}
-                    onClick={() => setCardFlip(!flip)}
+                <Card
+                    id={id}
+                    className={` ${styles.front} cursor-pointer h-[520px] ${
+                        flipped ? `${styles.flip}` : ''
+                    } border border-black`}
                 >
-                    {/* container for any future items, could be a grid instead */}
-                    <Flex className="p-4" direction="column" align="center">
-                        <p className="absolute pt-[15%] text-center">
-                            {flip ? answer : question}
-                        </p>
-                    </Flex>
-                </div>
-                {flip ? (
-                    <Flex justify="center">
-                        <RatingButtons dataId={id} />
-                    </Flex>
-                ) : null}
-            </Card>
+                    <div
+                        className={clsx('', {
+                            'h-[380px]': flipped === true,
+                        })}
+                        onClick={() => setCardFlip(!flipped)}
+                    >
+                        {/* container for any future items, could be a grid instead */}
+                        <Flex className="p-4" direction="column" align="center">
+                            <p className="absolute pt-[15%] text-center">
+                                {flipped ? answer : question}
+                            </p>
+                        </Flex>
+                    </div>
+                    {flipped ? (
+                        <Flex justify="center">
+                            <RatingButtons dataId={parseInt(id)} />
+                        </Flex>
+                    ) : null}
+                </Card>
+            </div>
         </>
     );
 };

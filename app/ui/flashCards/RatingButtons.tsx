@@ -3,7 +3,7 @@ import { Button, Flex } from '@radix-ui/themes';
 import Link from 'next/link';
 
 interface Props {
-    dataId: string;
+    dataId: number;
 }
 
 const RatingButtons = ({ dataId }: Props) => {
@@ -14,6 +14,7 @@ const RatingButtons = ({ dataId }: Props) => {
                 <Button
                     size="3"
                     style={{ background: 'black', cursor: 'pointer' }}
+                    onClick={() => console.log('score 4')}
                 >
                     <ReloadIcon />
                 </Button>
