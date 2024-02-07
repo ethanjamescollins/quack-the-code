@@ -6,7 +6,7 @@ import { oxanium } from './ui/fonts';
 import NavBar from './ui/navBar/NavBar';
 
 export const metadata: Metadata = {
-    title: 'Quack The Code',
+    title: '🐣 Quack The Code',
     description: '...',
 };
 

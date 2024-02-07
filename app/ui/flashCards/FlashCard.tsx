@@ -14,25 +14,26 @@ interface Props {
 const FlashCard = ({ id, question, answer }: Props) => {
     const [flipped, setCardFlip] = useState(false);
 
-
     return (
         <>
-            <Card
+            {/* flip with state only */}
+            {/* <div
                 id={id}
-                className={`cursor-pointer h-[520px] w-[100%] ${
+                className={`card cursor-pointer bg-black h-[520px] w-[100%] ${
                     flipped ? `${styles.flip}` : `${styles.flipBack}`
                 }`}
-                style={{
-                    background: '#000310',
-                }}
             >
                 <div
                     className={`h-[450px] border border-white`}
                     onClick={() => setCardFlip(!flipped)}
                 >
-                    {/* container for any future items, could be a grid instead */}
+                    {/* container for any future items, could be a grid instead
                     <Flex className="p-4" direction="column" align="center">
-                        <p className={`absolute pt-[15%] text-center text-gray-300  ${flipped ? `${styles.flip}` : ''}`}>
+                        <p
+                            className={`absolute pt-[15%] text-center text-gray-300  ${
+                                flipped ? `${styles.flip}` : ''
+                            }`}
+                        >
                             {flipped ? answer : question}
                         </p>
                     </Flex>
@@ -45,7 +46,24 @@ const FlashCard = ({ id, question, answer }: Props) => {
                         <RatingButtons dataId={parseInt(id)} />
                     </Flex>
                 ) : null}
-            </Card>
+            </div> */}
+            <div
+                id={id}
+                className={`${styles.card} ${flipped ? `${styles.flip}` : ''}`}
+                onClick={() => setCardFlip(!flipped)}
+            >
+                {/* container for any future items, could be a grid instead */}
+                <div className={`${styles.front}`}>
+                    <p>{question}</p>
+                </div>
+
+                <div className={`${styles.back}`}>
+                    <p>{answer}</p>
+                    <div className={`flex justify-center`}>
+                        <RatingButtons dataId={parseInt(id)} />
+                    </div>
+                </div>
+            </div>
         </>
     );
 };

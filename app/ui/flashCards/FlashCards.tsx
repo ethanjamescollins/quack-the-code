@@ -1,5 +1,6 @@
 import cardsDummyData from '@/app/lib/placeholder-data';
 import FlashCard from './FlashCard';
+import Prototypes from '../prototypes/prototype';
 
 interface FlashCard {
     id: number;
@@ -127,7 +128,7 @@ const FlashCards = () => {
         //     ))}
         // </div>
 
-        <div className="bg-yellow-400 carousel carousel-center gap-10 mt-[15vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
+        <div className="bg-black carousel carousel-center gap-10 mt-[15vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
             {flashCardData.map(data => (
                 <div className="carousel-item w-[100%] h-[100%]" key={data.id}>
                     <FlashCard
