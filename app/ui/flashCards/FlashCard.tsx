@@ -53,13 +53,13 @@ const FlashCard = ({ id, question, answer }: Props) => {
                 onClick={() => setCardFlip(!flipped)}
             >
                 {/* container for any future items, could be a grid instead */}
-                <div className={`${styles.front}`}>
+                <div className={`${styles.front} `}>
                     <p>{question}</p>
                 </div>
 
-                <div className={`${styles.back}`}>
+                <div className={`${styles.back} mt-44`}>
                     <p>{answer}</p>
-                    <div className={`flex justify-center`}>
+                    <div className={`flex justify-center mt-36`}>
                         <RatingButtons dataId={parseInt(id)} />
                     </div>
                 </div>
