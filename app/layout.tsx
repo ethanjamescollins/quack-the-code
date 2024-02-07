@@ -18,12 +18,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${oxanium.className} anitaliased`}>
-                <Theme>
-                    <header>
-                        <NavBar />
-                    </header>
-                    <main>{children}</main>
-                </Theme>
+                {/* removed radix theme */}
+                <header>
+                    <NavBar />
+                </header>
+                <main>{children}</main>
             </body>
         </html>
     );

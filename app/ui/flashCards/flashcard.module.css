@@ -1,11 +1,10 @@
-
-
 .flip {
     transform: rotateY(180deg) perspective(1000px);
-    transition: 0.3s;
+    transition: .2s;
 }
 
 .flipBack {
     transform: rotateY(0) perspective(1000px);
-    transition: .3s;
+    transition: 0.2s;
 }
+

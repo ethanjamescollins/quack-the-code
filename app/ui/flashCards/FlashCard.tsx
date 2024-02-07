@@ -14,6 +14,7 @@ interface Props {
 const FlashCard = ({ id, question, answer }: Props) => {
     const [flipped, setCardFlip] = useState(false);
 
+
     return (
         <>
             <Card
@@ -26,18 +27,21 @@ const FlashCard = ({ id, question, answer }: Props) => {
                 }}
             >
                 <div
-                    className={`h-[450px] ${flipped ? `${styles.flip}`: ''}`}
+                    className={`h-[450px] border border-white`}
                     onClick={() => setCardFlip(!flipped)}
                 >
                     {/* container for any future items, could be a grid instead */}
                     <Flex className="p-4" direction="column" align="center">
-                        <p className="absolute pt-[15%] text-center text-gray-300">
+                        <p className={`absolute pt-[15%] text-center text-gray-300  ${flipped ? `${styles.flip}` : ''}`}>
                             {flipped ? answer : question}
                         </p>
                     </Flex>
                 </div>
                 {flipped ? (
-                    <Flex justify="center" className={`${flipped ? `${styles.flip}`: ''}`}>
+                    <Flex
+                        justify="center"
+                        className={`${flipped ? `${styles.flip}` : ''}`}
+                    >
                         <RatingButtons dataId={parseInt(id)} />
                     </Flex>
                 ) : null}
