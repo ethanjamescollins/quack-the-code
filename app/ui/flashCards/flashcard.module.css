@@ -1,0 +1,46 @@
+/* .flip {
+    transform: rotateY(180deg) perspective(1000px);
+    transition: .2s;
+}
+
+.flipBack {
+    transform: rotateY(0) perspective(1000px);
+    transition: 0.2s;
+} */
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: hsla(0, 0%, 33%, 0.254);
+    color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.283);
+    width: 100%;
+    height: 450px;
+    transform: perspective(1000px) rotateY(0);
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+    /* temporary fix for backface visibility */
+    
+}
+
+.hidden {
+    visibility: hidden;
+}

@@ -1,12 +1,12 @@
 import { Flex } from '@radix-ui/themes';
-import FlashCards from './FlashCards';
-import RatingButtons from './RatingButtons';
+import FlashCards from './ui/flashCards/FlashCards';
+import Prototypes from './ui/prototypes/prototype';
 
 export default function Home() {
     return (
         <Flex direction="column" align="center">
             <FlashCards />
-            <RatingButtons />
+            {/* <Prototypes /> */}
         </Flex>
     );
 }
