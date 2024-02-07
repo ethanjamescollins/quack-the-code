@@ -12,7 +12,7 @@ interface Props {
 }
 
 const FlashCard = ({ id, question, answer }: Props) => {
-    const [flipped, setCardFlip] = useState(false);
+    const [flipped, setFlipped] = useState(false);
 
     return (
         <>
@@ -50,15 +50,19 @@ const FlashCard = ({ id, question, answer }: Props) => {
             <div
                 id={id}
                 className={`${styles.card} ${flipped ? `${styles.flip}` : ''}`}
-                onClick={() => setCardFlip(!flipped)}
+                onClick={() => setFlipped(!flipped)}
             >
                 {/* container for any future items, could be a grid instead */}
-                <div className={`${styles.front} `}>
+                <div
+                    className={`transition-all ${styles.front} ${
+                        flipped ? `${styles.hidden}` : ''
+                    } `}
+                >
                     <p>{question}</p>
                 </div>
 
-                <div className={`${styles.back} mt-44`}>
-                    <p>{answer}</p>
+                <div className={`${styles.back} transition-all mt-44`}>
+                    <p className="text-center">{answer}</p>
                     <div className={`flex justify-center mt-36`}>
                         <RatingButtons dataId={parseInt(id)} />
                     </div>

@@ -21,7 +21,7 @@
     height: 450px;
     transform: perspective(1000px) rotateY(0);
     transform-style: preserve-3d;
-    transition: 0.5s;
+    transition: .5s;
 }
 
 .card.flip {
@@ -38,5 +38,9 @@
 .card .back {
     transform: rotateY(180deg);
     /* temporary fix for backface visibility */
-    background: rgb(21, 21, 21);
+    
+}
+
+.hidden {
+    visibility: hidden;
 }

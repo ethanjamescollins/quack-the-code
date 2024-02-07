@@ -128,7 +128,7 @@ const FlashCards = () => {
         //     ))}
         // </div>
 
-        <div className="bg-black carousel carousel-center gap-10 mt-[15vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
+        <div className="carousel carousel-center gap-10 mt-[15vh] p-4 rounded-box w-[315px] md:w-[75vw] md:max-w-[900px] md:space-x-0">
             {flashCardData.map(data => (
                 <div className="carousel-item w-[100%] h-[100%]" key={data.id}>
                     <FlashCard
